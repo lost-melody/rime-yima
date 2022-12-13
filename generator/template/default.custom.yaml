@@ -1,0 +1,12 @@
+# Rime default custom settings
+# encoding: utf-8
+# 20190801
+patch:
+  schema_list:
+    - {schema: ymdz}
+  "switcher/caption": 〔菜单〕
+  "switcher/hotkeys":
+    - Control+grave
+  "switcher/save_options":
+  "switcher/fold_options": false
+  "menu/page_size": 6

@@ -1,0 +1,37 @@
+patch:
+  schema/name: 逸
+  schema/dependencies/+:
+    # 小鹤反查依赖
+    - double_pinyin_flypy
+  switches/+:
+  # 使用小鹤反查, 注释以使用全拼反查
+  rev_pinyin/prism: double_pinyin_flypy
+  key_binder/bindings/+:
+  ascii_composer/switch_key/+:
+    # 左Shift上屏候选, 右Shift上屏编码
+    Shift_L: commit_text
+    Shift_R: commit_code
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear
+  recognizer/patterns/+:
+  punctuator/half_shape/+:
+    '<' : '《'
+    '>' : '》'
+    '/' : '/'
+    '\' : '、'
+    '`' : '`'
+    '~' : '~'
+    '@' : '@'
+    '#' : '#'
+    '%' : '%'
+    '$' : '￥'
+    '*' : '*'
+    '[' : '【'
+    ']' : '】'
+    '{' : '｛'
+    '}' : '｝'
+  editor/bindings/+:
+    # 回车清空编码
+    Return: cancel

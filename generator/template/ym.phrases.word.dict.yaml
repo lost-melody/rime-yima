@@ -1,0 +1,9 @@
+# Rime dictionary: ym.phrases.word
+# encoding: utf-8
+
+---
+name: ym.phrases.word
+version: "1.0"
+sort: by_weight
+...
+

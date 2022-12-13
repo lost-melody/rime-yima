@@ -1,0 +1,26 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: ym.phrases
+  name: 分号词库
+  version: "0.5"
+  author:
+    - 王牌饼干
+  description: |
+    空格出词。
+    二字词：首次(AA_BBeruio)。
+    三字词：首次末(AB_CCeruio)。
+    多字词：首次末(AB_ZZeruio)。
+
+speller:
+  alphabet: "qwertyuiopasdfghjklzxcvbnm "
+  initials: "qwertyuiopasdfghjklzxcvbnm"
+  finals: ""
+  use_space: true
+  algebra:
+    - xform/;/ /
+
+# 主翻译器
+translator:
+  dictionary: ym.phrases.main

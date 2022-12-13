@@ -1,0 +1,19 @@
+﻿---
+name: ymdz.comp
+version: "alpha"
+sort: by_weight
+columns:
+  - text
+  - code
+  - stem
+
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBbBcBdBe"
+    - length_equal: 3
+      formula: "AaAbBaCaCcCdCe"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZaZcZdZe"
+...
+
