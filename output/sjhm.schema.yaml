@@ -1,0 +1,20 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: sjhm
+  name: 四角号码
+  version: "0.5"
+  author:
+    - 发明人 王云五先生
+    - 码表来自 github.com/zongxinbo/rime-zong
+  description: |
+    四角号码反查(生僻字输入)方案。
+    数字编码以第一排字母键代替。
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+
+# 主翻译器
+translator:
+  dictionary: sjhm
