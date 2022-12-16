@@ -4,7 +4,7 @@
 
 ## 逸码文档
 
-- 拆分码表源仓库: [lakent/yi][1]
+- 拆分码表源仓库: [lakent/yi][5], [lakent/yi][1]
 - 逸码教程、文档及其他资料等参见QQ群: 790835977
 
 ## 本方案配置说明
@@ -46,7 +46,7 @@ make package
 ## 数据来源声明
 
 - 字频及词频数据: 逸码群单单字频词频表
-- 方案拆分和字根映射码表: [lakent/yi][1]
+- 方案拆分和字根映射码表: [lakent/yi][5], [lakent/yi][1]
 - 四角号码反查码表: [zongxinbo/rime-zong][2]
 - 袖珍简化字拼音码表: [rime/rime-pinyin-simp][3]
 - 小鹤双拼配置: [rime/rime-double-pinyin][4]
@@ -56,4 +56,5 @@ make package
 [2]: https://github.com/zongxinbo/rime-zong "Github"
 [3]: https://github.com/rime/rime-pinyin-simp "Github"
 [4]: https://github.com/rime/rime-double-pinyin "Github"
+[5]: https://github.com/lakent/yi "Github"
 

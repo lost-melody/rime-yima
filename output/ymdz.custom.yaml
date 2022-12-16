@@ -3,6 +3,8 @@ patch:
   schema/dependencies/+:
     # 小鹤反查依赖
     - double_pinyin_flypy
+  # 是否默认启用emoji候选
+  switches/@last/reset: 0
   switches/+:
   # 使用小鹤反查, 注释以使用全拼反查
   rev_pinyin/prism: double_pinyin_flypy
