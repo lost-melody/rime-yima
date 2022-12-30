@@ -1,8 +1,8 @@
-# Rime dictionary: ym.phrases.comp
+# Rime dictionary: ym.phrases
 # encoding: utf-8
 
 ---
-name: ym.phrases.comp
+name: ym.phrases
 version: "1.0"
 sort: by_weight
 ...

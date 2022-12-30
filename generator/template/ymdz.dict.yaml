@@ -1,5 +1,8 @@
-﻿---
-name: ymdz.comp
+﻿# Rime dictionary: 逸码·单字
+# encoding: utf-8
+
+---
+name: ymdz
 version: "alpha"
 sort: by_weight
 columns:
