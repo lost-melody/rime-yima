@@ -15,7 +15,6 @@ schema:
     1. 拼音反查：按`i`引导；
     2. 四角号码反查：按`i`引导，以第一排字母键代替数字码；
     3. 空格出词：空格用于出词，单字需要顶字或双空格上屏，反查需要数字键选字；
-    4. 竞争候选：为唯一候选添加竞争，使其不会自动上屏。
   dependencies:
     - pinyin_simp
     - ym.phrases
@@ -80,11 +79,11 @@ speller:
   finals: " "
   use_space: true
   auto_select: true
-  auto_select_qnique_candidate: true
+  auto_select_unique_candidate: true
 
 # 主翻译器
 translator:
-  dictionary: ymdz.main
+  dictionary: ymdz
   enable_encoder: false
   enable_completion: true
   enable_sentence: false
@@ -121,8 +120,8 @@ emoji:
 # 空格出词
 ym.phrases:
   __include: /translator
-  dictionary: ym.phrases.main
-  prism: ym.phrases.main
+  dictionary: ym.phrases
+  prism: ym.phrases
   initial_quality: 1
 
 # 自定义词库, 在 custom.phrases.txt 中添加
@@ -187,6 +186,8 @@ recognizer:
   patterns:
     rev: "^i([a-z]+'?)*$"
     punct: '^o([0-9]0?|[A-Za-z]+)$'
+    retword: '^[a-df-hj-npqstv-z][a-z][eruio]{0,4}$'
+    retphrase: '^[a-df-hj-npqstv-z][a-z] [a-z]{2}[eruio]{0,4}$'
 
 menu:
   page_size: 6

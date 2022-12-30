@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 ---
-name: ymdz.word
+name: ymdz
 version: "alpha"
 sort: by_weight
 columns:
