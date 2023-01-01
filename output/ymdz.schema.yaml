@@ -14,7 +14,7 @@ schema:
     基于单字方案，增加：
     1. 拼音反查：按`i`引导；
     2. 四角号码反查：按`i`引导，以第一排字母键代替数字码；
-    3. 空格出词：空格用于出词，单字需要顶字或双空格上屏，反查需要数字键选字；
+    3. 空格出词：空格用于出词，二码单字需要顶字或双空格上屏，反查需要数字键选字；
   dependencies:
     - pinyin_simp
     - ym.phrases
@@ -74,12 +74,13 @@ engine:
     - simplifier@emoji
 
 speller:
-  alphabet: "qwertyuiopasdfghjklzxcvbnm "
+  alphabet: "qwertyuiopasdfghjklzxcvbnm&"
   initials: "qwertyuiopasdfghjklzxcvbnm"
-  finals: " "
-  use_space: true
   auto_select: true
   auto_select_unique_candidate: true
+  algebra:
+    - 'derive/^([a-z]{2})$/$1&&/'
+    - 'derive/^([a-z]{3,6})$/$1&/'
 
 # 主翻译器
 translator:
@@ -91,7 +92,7 @@ translator:
   strict_spelling: true
   initial_quality: 1000000
   preedit_format:
-    - "xform/ /_/"
+    - "xform/&/_/"
   comment_format:
     - "xform/;/_/"
 
@@ -165,6 +166,7 @@ punctuator:
 
 key_binder:
   bindings:
+    - { when: has_menu, accept: space, send: '&' }
     # 减号、等号翻页
     - { when: paging, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
@@ -187,7 +189,7 @@ recognizer:
     rev: "^i([a-z]+'?)*$"
     punct: '^o([0-9]0?|[A-Za-z]+)$'
     retword: '^[a-df-hj-npqstv-z][a-z][eruio]{0,4}$'
-    retphrase: '^[a-df-hj-npqstv-z][a-z] [a-z]{2}[eruio]{0,4}$'
+    retphrase: '^[a-df-hj-npqstv-z][a-z]&[a-z]{2}[eruio]{0,4}$'
 
 menu:
   page_size: 6
