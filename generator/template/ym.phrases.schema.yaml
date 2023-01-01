@@ -14,12 +14,11 @@ schema:
     多字词：首次末(AB_ZZeruio)。
 
 speller:
-  alphabet: "qwertyuiopasdfghjklzxcvbnm "
+  alphabet: "qwertyuiopasdfghjklzxcvbnm&"
   initials: "qwertyuiopasdfghjklzxcvbnm"
-  finals: ""
-  use_space: true
   algebra:
-    - xform/;/ /
+    - 'derive/^([a-z]{2};[a-z]{2,6})$/$1&/'
+    - xform/;/&/
 
 # 主翻译器
 translator:
