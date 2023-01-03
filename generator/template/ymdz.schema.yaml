@@ -117,6 +117,7 @@ zh_simp:
 
 # emoji表情候选
 emoji:
+  tags: [ retword, retphrase ]
   opencc_config: emoji.json
   option_name: emoji
 
