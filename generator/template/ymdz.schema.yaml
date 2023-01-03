@@ -81,6 +81,7 @@ speller:
   algebra:
     - 'derive/^([a-z]{2})$/$1&&/'
     - 'derive/^([a-z]{3,6})$/$1&/'
+    - 'derive/^([a-z]{3,6})\$$/$1/'
 
 # 主翻译器
 translator:
@@ -94,6 +95,7 @@ translator:
   preedit_format:
     - "xform/&/_/"
   comment_format:
+    - 'xform/\$$//'
     - "xform/;/_/"
 
 # 拆分提示
@@ -149,6 +151,7 @@ rev_pinyin:
   tag: rev_pinyin
   dictionary: pinyin_simp
   comment_format:
+    - 'xform/\$$//'
     - "xform/^/[/"
     - "xform/$/]/"
 
@@ -157,6 +160,7 @@ rev_sjhm:
   tag: rev_sjhm
   dictionary: sjhm
   comment_format:
+    - 'xform/\$$//'
     - "xform/^/[/"
     - "xform/$/]/"
 
@@ -189,7 +193,7 @@ recognizer:
     rev: "^i([a-z]+'?)*$"
     punct: '^o([0-9]0?|[A-Za-z]+)$'
     retword: '^[a-df-hj-npqstv-z][a-z][eruio]{0,4}$'
-    retphrase: '^[a-df-hj-npqstv-z][a-z]&[a-z]{2}[eruio]{0,4}$'
+    retphrase: '^[a-df-hj-npqstv-z][a-z]&([a-df-hj-npqstv-z]([a-z][eruio]{0,4})?)?$'
 
 menu:
   page_size: 6

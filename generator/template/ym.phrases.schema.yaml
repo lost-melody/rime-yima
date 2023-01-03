@@ -18,6 +18,7 @@ speller:
   initials: "qwertyuiopasdfghjklzxcvbnm"
   algebra:
     - 'derive/^([a-z]{2};[a-z]{2,6})$/$1&/'
+    - 'derive/^([a-z]{2};[a-z]{2,6})\$$/$1/'
     - xform/;/&/
 
 # 主翻译器

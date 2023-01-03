@@ -3,7 +3,7 @@
 import sys
 import argparse
 
-parser = argparse.ArgumentParser(description="fullcode gen")
+parser = argparse.ArgumentParser(description="phrase table gen")
 parser.add_argument("--freq", "-f", type=str, default="freq/phrase.txt")
 parser.add_argument("--code", "-c", type=str, default="table/yi_fullcode_table.txt")
 parser.add_argument("--table", "-t", type=str, default="table/yi_table.txt")

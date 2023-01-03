@@ -22,9 +22,9 @@ build: $(word) $(phrase) $(spelling)
 	# 拆分提示
 	cat $(spelling) > $(out)/opencc/division.txt
 	# 单字码表
-	cat $(word) >> $(out)/ymdz.dict.yaml
+	$(gen)/dict-gen.py -t $(word) >> $(out)/ymdz.dict.yaml
 	# 空格词码表
-	cat $(phrase) >> $(out)/ym.phrases.dict.yaml
+	$(gen)/dict-gen.py -t $(phrase) >> $(out)/ym.phrases.dict.yaml
 
 apply: $(out)
 	# 输出到 ibus-rime 配置
@@ -37,7 +37,7 @@ package: $(out)
 clean:
 	# 清理生成
 	-rm $(fullcode) $(word) $(phrase) 2> /dev/null
-	# -rm -r $(out) 2> /dev/null
+	-rm -r $(out) 2> /dev/null
 
 $(out): build
 
