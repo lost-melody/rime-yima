@@ -31,5 +31,10 @@ with open(args.freq) as freq_list:
         if not fullcode:
             print("ERROR:", char, file=sys.stderr)
         else:
+            fullcode_map.pop(char)
             print("%s\t%s\t%s" % (char, get_simp(char, fullcode), freq))
+
+for char in fullcode_map:
+    fullcode = fullcode_map[char]
+    print("%s\t%s\t%s" % (char, get_simp(char, fullcode), 0))
 
