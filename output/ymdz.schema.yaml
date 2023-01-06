@@ -112,6 +112,7 @@ division:
 
 # 简转繁
 zh_simp:
+  tags: [ retword, retphrase ]
   opencc_config: s2t.json
   option_name: zh_simp
 
