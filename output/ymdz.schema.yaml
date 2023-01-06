@@ -38,6 +38,8 @@ switches:
     reset: 0
   - name: ascii_mode
     reset: 0
+  - name: s2t
+    reset: 0
   - name: emoji
     reset: 0
 
@@ -71,6 +73,7 @@ engine:
     - uniquifier
     - simplifier@division
     - simplifier@zh_simp
+    - simplifier@s2t
     - simplifier@emoji
 
 speller:
@@ -114,6 +117,11 @@ division:
 zh_simp:
   opencc_config: s2t.json
   option_name: zh_simp
+
+s2t:
+  tags: [ retword, retphrase ]
+  opencc_config: s2t.json
+  option_name: s2t
 
 # emoji表情候选
 emoji:
