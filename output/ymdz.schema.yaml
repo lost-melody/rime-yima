@@ -62,6 +62,7 @@ engine:
     - punct_translator
     - table_translator
     - table_translator@ym.phrases
+    - table_translator@custom.phrases
     - reverse_lookup_translator@rev
     - reverse_lookup_translator@rev_pinyin
     - reverse_lookup_translator@rev_sjhm
@@ -127,6 +128,15 @@ ym.phrases:
   dictionary: ym.phrases
   prism: ym.phrases
   initial_quality: 1
+
+# 自定义词库
+custom.phrases:
+  __include: /translator
+  dictionary: ''
+  user_dict: custom.phrases
+  enable_user_dict: true
+  db_class: stabledb
+  initial_quality: 0
 
 # 反查
 rev:

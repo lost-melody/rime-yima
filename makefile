@@ -2,6 +2,7 @@
 
 gen = generator
 out = output
+ibus = ~/.config/ibus/rime
 temp = $(gen)/template
 freq = $(gen)/freq
 table = $(gen)/table
@@ -28,7 +29,8 @@ build: $(word) $(phrase) $(spelling)
 
 apply: $(out)
 	# 输出到 ibus-rime 配置
-	rsync -a $(out)/ ~/.config/ibus/rime/
+	rsync -a --exclude custom.phrases.txt $(out)/ $(ibus)/
+	[ -f $(ibus)/custom.phrases.txt ] || cp $(out)/custom.phrases.txt $(ibus)/
 
 package: $(out)
 	# 打包发布
