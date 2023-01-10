@@ -39471,7 +39471,7 @@
 申能	wj;ch	4076
 太阳眼镜	ky;vmo	4076
 华清池	yn;nd	4076
-下疳	le;ad	4076
+下疳	le;lde	4076
 鱼排	do;gz	4076
 鞭挞	qj;gk	4076
 掉入	gl;dorrr	4076
