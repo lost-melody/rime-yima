@@ -173,6 +173,7 @@ punctuator:
 key_binder:
   bindings:
     - { when: has_menu, accept: space, send: '&' }
+    - { when: composing, accept: space, send: Escape }
     # 减号、等号翻页
     - { when: paging, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
