@@ -1786,7 +1786,7 @@
 恒	hjiu	10247
 厨	ahe	10227
 冯	wa	10213
-躯	zvo	10200
+躯	zme	10200
 乖	nzi	10198
 刑	nniii	10193
 芬	fsor	10187
@@ -1981,7 +1981,7 @@
 蝶	bdu	8126
 矛	hur	8108
 龄	hqor	8104
-屁	zme	8094
+屁	zmeu	8094
 岭	yqor	8091
 韵	mkr	8088
 夕	bour	8070
@@ -4909,7 +4909,7 @@
 疣	lxrr	178
 讣	slir	177
 粕	qdo	177
-跎	zvou	175
+跎	zvo	175
 脍	hdeeu	175
 揆	gyeeo	175
 蹉	zkei	175
